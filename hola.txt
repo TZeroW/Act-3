@@ -1,32 +1,8 @@
 Tutorial para usar esta cosa lolol
 
-Opción A: Usando "Thunder Client" (Recomendado en VS Code)
-Es como Postman, pero dentro de tu editor:
-Busca en las extensiones de VS Code "Thunder Client" e instálalo.
-Haz clic en el icono del rayo que aparecerá a la izquierda.
-Haz clic en "New Request".
-Cambia GET por POST.
-En la URL escribe: http://localhost:3000/register.
-Ve a la pestaña Body, selecciona JSON y pega:
-
-{
-  "username": "XXXX",
-  "password": "XXXXX"
-}
-
-Dale a Send. Repite lo mismo para /login para obtener tu Token.
-
-Una vez que tengas el Token del login, para usar GET /tareas en Thunder Client:
-Crea una nueva petición GET a http://localhost:3000/tareas.
-Ve a la pestaña Auth.
-Busca la opción Bearer Token.
-Pega ahí el código largo que recibiste.
-Dale a Send.
+Postman
 
 
-Opción B: Si estás usando Postman, el proceso es muy similar y es la mejor forma de probar APIs profesionales. Aquí tienes los pasos exactos para registrarte, iniciar sesión y usar tu token:
-
-Registrar un usuario (POST /register)
 Abre una nueva pestaña en Postman (botón +).
 Cambia el método de GET a POST.
 En la URL escribe: http://localhost:3000/register.
@@ -72,3 +48,11 @@ En Body -> raw -> JSON, pega:
 }
 
 Luego se fijan en le archivo de tareas y veran el JSON con la tarea creada.
+
+Si quieres ver: Usas GET.
+
+Si quieres agregar: Usas POST.
+
+Si quieres modificar una específica: Usas PUT y le pasas el ID en la URL, por ejemplo: http://localhost:3000/tareas/1707412345678.
+
+Si quieres borrar una específica: Usas DELETE con el ID en la URL.
