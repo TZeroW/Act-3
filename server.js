@@ -87,7 +87,7 @@ app.post('/tareas', autenticarToken, async (req, res, next) => {
         if (!titulo || !descripcion) return res.status(400).send('Se necesita un titulo y una descripcio porfas');
 
         const tareas = await leerArchivo(DATA_FILE);
-        const nuevaTarea = { id: Date.now(), descripcion };
+        const nuevaTarea = { id: Date.now(), titulo, descripcion };
 
         tareas.push(nuevaTarea);
         await guardarArchivo(DATA_FILE, tareas);
